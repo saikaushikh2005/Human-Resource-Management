@@ -1,0 +1,185 @@
+body {
+    margin: 0;
+    padding: 0;
+    color: #e0e0e0; 
+    height: 100vh;
+    display: flex;
+    overflow: hidden;
+    background: linear-gradient(60deg, #000, #590909);
+
+}
+
+.dashboard-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+}
+
+.sidebar {
+    width: 250px;
+    background: linear-gradient(0deg, #000, #590909);
+    padding: 20px;
+    height: calc(100vh - 60px);
+    overflow-y: auto;
+    position: fixed;
+    top: 60px; 
+    border-radius: 20px;
+}
+
+.sidebar nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar nav ul li {
+    margin: 20px 0;
+}
+
+.sidebar nav ul li a {
+    color: #e0e0e0;
+    text-decoration: none;
+    font-size: 1.2em;
+    display: block;
+    padding: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.sidebar nav ul li a:hover {
+    background-color: #c70000;
+    border-radius: 5px;
+}
+
+.main-content {
+    margin-left: 250px;
+    width: calc(100% - 250px);
+    padding: 20px;
+    background: linear-gradient(60deg, #000, #590909); /* Gradient background */
+    overflow-y: auto;
+    height: calc(100vh - 60px);
+    margin-top: 60px; 
+}
+.sidebar nav ul li a {
+    color: #e0e0e0;
+    text-decoration: none;
+    font-size: 1.2em;
+    display: block;
+    padding: 10px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    border-radius: 5px;
+}
+
+.sidebar nav ul li a:hover {
+    background-color: #c70000;
+    transform: scale(1.05); /* Slightly enlarge the item */
+    color: #ffffff; /* Ensure text color contrasts well on hover */
+}
+
+.top-navbar {
+    background-color: #333;
+    color: #e0e0e0;
+    padding: 8px 20px;
+    text-align: left;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+}
+
+.logo-image {
+    width: 40px;
+    height: 100px;
+    border-radius: 80px;
+    transform: translateX(70px);
+}
+
+.navbar-title {
+    font-size: 1.8em; 
+    font-weight: bold; 
+    color: #ffffff; 
+    transform: translateX(10px);
+}
+
+.create {
+    background: linear-gradient(0deg,#590909, #000);
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Slightly darker shadow for better visibility */
+    max-width: 500px;
+    width: 100%;
+    margin-top: 4%; 
+    transform: translateX(500px); 
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #e0e0e0; /* Light text color for readability */
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+label {
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #e0e0e0; /* Light label color */
+}
+
+input, select {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #555; /* Darker border for contrast */
+    font-size: 14px;
+    background-color: #333; /* Dark background to match the form */
+    color: #e0e0e0; /* Light text color for readability */
+    width: 100%; /* Adjust to full width */
+}
+
+input:focus, select:focus {
+    outline: none;
+    border-color: #007bff;
+    background-color: #444; /* Slightly lighter on focus */
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.alert {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    display: none;
+}
+
+.alert.show {
+    display: block;
+}
